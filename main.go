@@ -26,10 +26,9 @@ func (c *IstekSayaci) Sayac(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	// Yeni bir istek sayacı oluştur.
+
 	counter := YeniIstekSayaci()
 
-	// "/istek-sayaci" adresine istek geldiğinde counter'ı kullan.
 	http.HandleFunc("/istek-sayaci", counter.Sayac)
 
 	// Sunucuyu 8080 portunda başlat.
